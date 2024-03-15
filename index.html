@@ -220,7 +220,7 @@
                                 </span> -->
 
                                 <span class="link-block">
-                                    <a target="_blank" href=""
+                                    <a target="_blank" href="paper.pdf"
                                         class="external-link button is-normal is-rounded is-dark">
                                         <span class="icon">
                                             <i class="fas fa-file-pdf"></i>
@@ -317,7 +317,7 @@
                 <pre><code>import tensorflow_datasets as tfds     
 
 ds = tfds.load("droid", 
-data_dir="gs://gresearch/robotics", split="train")
+&nbsp;&nbsp;&nbsp;&nbsp;data_dir="gs://gresearch/robotics", split="train")
 
 for episode in ds.take(5):
 &nbsp;&nbsp;&nbsp;&nbsp;for step in episode["steps"]:
