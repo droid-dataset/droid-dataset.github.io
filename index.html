@@ -52,8 +52,9 @@
                             <span class="team-name"><b>DROID Dataset Team</b></span>
                             <span class="author-block">
                                 Alexander Khazatsky<sup>*</sup>, Karl Pertsch<sup>*</sup>, Suraj Nair, Ashwin Balakrishna, Sudeep Dasari, Siddharth Karamcheti, Soroush Nasiriany, Mohan Kumar Srirama, Lawrence Yunliang Chen, Kirsty Ellis, Peter David Fagan, Joey Hejna, Masha Itkina, Marion Lepert, Yecheng Jason Ma, Patrick Tree Miller, Jimmy Wu, Suneel Belkhale, Shivin Dass, Huy Ha, Arhan Jain, Abraham Lee, Youngwoon Lee, Marius Memmel, Sungjae Park, Ilija Radosavovic, Kaiyuan Wang, Albert Zhan, Kevin Black, Cheng Chi, Kyle Beltran Hatch, Shan Lin, Jingpei Lu, Jean Mercat, Abdul Rehman, Pannag R Sanketi, Archit Sharma, Cody Simpson, Quan Vuong, Homer Rich Walke, Blake Wulfe, Ted Xiao, Jonathan Heewon Yang, Arefeh Yavary, Tony Z. Zhao, Christopher Agia, Rohan Baijal, Mateo Guaman Castro, Daphne Chen, Qiuyu Chen, Trinity Chung, Jaimyn Drake, Ethan Paul Foster, Jensen Gao, David Antonio Herrera, Minho Heo, Kyle Hsu, Jiaheng Hu, Donovon Jackson, Charlotte Le, Yunshuang Li, Kevin Lin, Roy Lin, Zehan Ma, Abhiram Maddukuri, Suvir Mirchandani, Daniel Morton, Tony Nguyen, Abigail O'Neill, Rosario Scalise, Derick Seale, Victor Son, Stephen Tian, Emi Tran, Andrew E. Wang, Yilin Wu, Annie Xie, Jingyun Yang, Patrick Yin, Yunchu Zhang, Osbert Bastani, Glen Berseth, Jeannette Bohg, Ken Goldberg, Abhinav Gupta, Abhishek Gupta, Dinesh Jayaraman, Joseph J Lim, Jitendra Malik, Roberto Martín-Martín, Subramanian Ramamoorthy, Dorsa Sadigh, Shuran Song, Jiajun Wu, Michael C. Yip, Yuke Zhu, Thomas Kollar, Sergey Levine, Chelsea Finn
+                                <br>
+                                <span class="is-size-6"><sup>*</sup>Co-Lead</span>
                             </span>
-                            <span class="is-size-6 author-block"><sup>*</sup>Co-Lead</span>
                         </div>
 
                         <div class="column has-text-centered">
@@ -611,6 +612,20 @@ for episode in ds.take(5):
 </body>
 
 <script>
+
+    document.addEventListener('DOMContentLoaded', (event) => {
+        document.querySelectorAll('.team-name').forEach(item => {
+            item.addEventListener('click', (event) => {
+                let authorBlock = item.nextElementSibling;
+                if (authorBlock.style.display === 'block') {
+                    authorBlock.style.display = 'none';
+                } else {
+                    authorBlock.style.display = 'block';
+                }
+            });
+        });
+    });
+
 
     timeoutIds = [];
 
