@@ -28,37 +28,12 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <style>
-        .container-vis {
-            display: block; /* Change the container display to block */
+        .author-block {
+            display: none;
         }
 
-        .left-container-vis {
-            float: left; /* Float the left container to the left */
-            width: 20%; /* Set the width of the left container to 20% */
-            padding: 10px;
-        }
-
-        .right-container-vis {
-            overflow-y: auto; /* Enable vertical scrollbar for the right container */
-            max-height: 90vh; /* Set a maximum height for the right container to make it scrollable */
-        }
-
-        .image-container-vis {
-            width: calc(25% - 20px); /* Sets the width of each image container to 25% (4 images per row) */
-            margin: 10px; /* Adds some spacing between images */
-            float: left; /* Float the image containers to the left */
-            text-align: center; /* Center the content within each image container */
-        }
-
-        /* Set a maximum width for the images */
-        .image-container-vis img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        /* Center the captions within the image containers */
-        .image-container-vis p {
-            margin: 0; /* Remove default margin */
+        .publication-authors:hover .author-block {
+            display: block;
         }
     </style>
 </head>
@@ -71,155 +46,18 @@
             <div class="container is-max-desktop">
                 <div class="columns is-centered">
                     <div class="column has-text-centered">
-                        <h1 class="title is-1 publication-title">DROID: <br>
-                            A Large-Scale In-the-Wild Robot Manipulation Dataset</h1>
+                        <h1 class="title is-1 publication-title">DROID: A Large-Scale In-the-Wild<br>Robot Manipulation Dataset</h1>
 
                         <div class="is-size-5 publication-authors">
-                            <style> .author-block { display: none; } .team-name:hover + .author-block { display: block; } </style>
                             <span class="team-name"><b>DROID Dataset Team</b></span>
                             <span class="author-block">
                                 Alexander Khazatsky<sup>*</sup>, Karl Pertsch<sup>*</sup>, Suraj Nair, Ashwin Balakrishna, Sudeep Dasari, Siddharth Karamcheti, Soroush Nasiriany, Mohan Kumar Srirama, Lawrence Yunliang Chen, Kirsty Ellis, Peter David Fagan, Joey Hejna, Masha Itkina, Marion Lepert, Yecheng Jason Ma, Patrick Tree Miller, Jimmy Wu, Suneel Belkhale, Shivin Dass, Huy Ha, Arhan Jain, Abraham Lee, Youngwoon Lee, Marius Memmel, Sungjae Park, Ilija Radosavovic, Kaiyuan Wang, Albert Zhan, Kevin Black, Cheng Chi, Kyle Beltran Hatch, Shan Lin, Jingpei Lu, Jean Mercat, Abdul Rehman, Pannag R Sanketi, Archit Sharma, Cody Simpson, Quan Vuong, Homer Rich Walke, Blake Wulfe, Ted Xiao, Jonathan Heewon Yang, Arefeh Yavary, Tony Z. Zhao, Christopher Agia, Rohan Baijal, Mateo Guaman Castro, Daphne Chen, Qiuyu Chen, Trinity Chung, Jaimyn Drake, Ethan Paul Foster, Jensen Gao, David Antonio Herrera, Minho Heo, Kyle Hsu, Jiaheng Hu, Donovon Jackson, Charlotte Le, Yunshuang Li, Kevin Lin, Roy Lin, Zehan Ma, Abhiram Maddukuri, Suvir Mirchandani, Daniel Morton, Tony Nguyen, Abigail O'Neill, Rosario Scalise, Derick Seale, Victor Son, Stephen Tian, Emi Tran, Andrew E. Wang, Yilin Wu, Annie Xie, Jingyun Yang, Patrick Yin, Yunchu Zhang, Osbert Bastani, Glen Berseth, Jeannette Bohg, Ken Goldberg, Abhinav Gupta, Abhishek Gupta, Dinesh Jayaraman, Joseph J Lim, Jitendra Malik, Roberto Martín-Martín, Subramanian Ramamoorthy, Dorsa Sadigh, Shuran Song, Jiajun Wu, Michael C. Yip, Yuke Zhu, Thomas Kollar, Sergey Levine, Chelsea Finn
-
-                                <!-- <a>Alexander Khazatsky</a><sup>*</sup>,
-                                <a>Karl Pertsch</a><sup>*</sup>,
-                                Suraj Nair,
-                                <a>Ashwin Balakrishna</a>,
-                                <a>Sudeep Dasari</a>,
-                                <a>Siddharth Karamcheti</a>,
-                                <a>Soroush Nasiriany</a>,
-                                <a>Mohan Kumar Srirama</a>,
-                                <a>Lawrence Yunliang Chen</a>,
-                                <a>Kirsty Ellis</a>,
-                                <a>Peter David Fagan</a>,
-                                <a>Joey Hejna</a>,
-                                <a>Masha Itkina</a>,
-                                <a>Marion Lepert</a>,
-                                <a>Yecheng Jason Ma</a>,
-                                <a>Patrick Tree Miller</a>,
-                                <a>Jimmy Wu</a>,
-                                <a>Suneel Belkhale</a>,
-                                <a>Shivin Dass</a>, 
-                                <a>Huy Ha</a>,
-                                <a>Arhan Jain</a>,
-                                <a>Abraham Lee</a>,
-                                <a>Youngwoon Lee</a>,
-                                <a>Marius Memmel</a>,
-                                <a>Sungjae Park</a>,
-                                <a>Ilija Radosavovic</a>,
-                                <a>Kaiyuan Wang</a>,
-                                <a>Albert Zhan</a>,
-                                <a>Kevin Black</a>,
-                                <a>Cheng Chi</a>,
-                                <a>Kyle Beltran Hatch</a>,
-                                <a>Shan Lin</a>, 
-                                <a>Jingpei Lu</a>,
-                                <a>Jean Mercat</a>,
-                                <a>Abdul Rehman</a>,
-                                <a>Pannag R Sanketi</a>,
-                                <a>Archit Sharma</a>,
-                                <a>Cody Simpson</a>,
-                                <a>Quan Vuong</a>,
-                                <a>Homer Rich Walke</a>, 
-                                <a>Blake Wulfe</a>,
-                                <a>Ted Xiao</a>,
-                                <a>Jonathan Heewon Yang</a>,
-                                <a>Arefeh Yavary</a>, 
-                                <a>Tony Z. Zhao</a>, 
-                                <a>Christopher Agia</a>, 
-                                <a>Rohan Baijal</a>, 
-                                <a>Mateo Guaman Castro</a>,
-                                <a>Daphne Chen</a>, 
-                                <a>Qiuyu Chen</a>, 
-                                <a>Trinity Chung</a>,
-                                <a>Jaimyn Drake</a>, 
-                                <a>Ethan Paul Foster</a>, 
-                                <a>Jensen Gao</a>,
-                                <a>David Antonio Herrera</a>,
-                                <a>Minho Heo</a>, 
-                                <a>Kyle Hsu</a>, 
-                                <a>Jiaheng Hu</a>, 
-                                <a>Donovon Jackson</a>, 
-                                <a>Charlotte Le</a>, 
-                                <a>Yunshuang Li</a>, 
-                                <a>Roy Lin</a>, 
-                                <a>Zehan Ma</a>, 
-                                <a>Abhiram Maddukuri</a>, 
-                                <a>Suvir Mirchandani</a>, 
-                                <a>Daniel Morton</a>, 
-                                <a>Tony Nguyen</a>, 
-                                <a>Abigail O'Neill</a>, 
-                                <a>Rosario Scalise</a>, 
-                                <a>Derick Seale</a>,
-                                <a>Victor Son</a>, 
-                                <a>Stephen Tian</a>, 
-                                <a>Emi Tran</a>,
-                                <a>Andrew E. Wang</a>, 
-                                <a>Yilin Wu</a>,
-                                <a>Annie Xie</a>, 
-                                <a>Jingyun Yang</a>, 
-                                <a>Patrick Yin</a>, 
-                                <a>Yunchu Zhang</a>, 
-                                <a>Osbert Bastani</a>, 
-                                <a>Glen Berseth</a>, 
-                                <a>Jeannette Bohg</a>, 
-                                <a>Ken Goldberg</a>, 
-                                <a>Abhinav Gupta</a>,
-                                <a>Abhishek Gupta</a>, 
-                                <a>Dinesh Jayaraman</a>,
-                                <a>Joseph J Lim</a>, 
-                                <a>Jitendra Malik</a>, 
-                                <a>Roberto Martín-Martín</a>, 
-                                <a>Subramanian Ramamoorthy</a>, 
-                                <a>Dorsa Sadigh</a>, 
-                                <a>Shuran Song</a>, 
-                                <a>Jiajun Wu</a>,
-                                <a>Michael C. Yip</a>,
-                                <a>Yuke Zhu</a>, 
-                                <a>Thomas Kollar</a>, 
-                                <a>Sergey Levine</a>, 
-                                <a>Chelsea Finn</a> -->
-                                
                             </span>
-                        </div>
-
-                        <!-- <div class="is-size-5 publication-authors">
-                            <span class="author-block"><sup>1</sup>NVIDIA; </span>
-                            <span class="author-block"><sup>2</sup>UPenn; </span>
-                            <span class="author-block"><sup>3</sup>Caltech; </span>
-                            <span class="author-block"><sup>4</sup>UT Austin;</span>
-                            <span class="author-block"><sup>&#8225;</sup>Equal Advising </span>
-                        </div> -->
-
-                        <!-- <div class="is-size-5 publication-authors">
-                        <span class="author-block">
-                                    <span class="icon">
-                                        <i class="fa fa-envelope"></i>
-                                    </span>
-                            Corresponding authors: TODO
-                        </span>
-                        </div> -->
-
-                        <!-- <div class="is-size-5 publication-authors">
-                        <span class="author-block">Work done during the first author's internship at NVIDIA</span>
-                        </div> -->
-
-                        <div class="is-size-6 publication-authors">
-                        <span class="author-block"><sup>*</sup>Co-Lead</span>
-                        <!-- <span class="author-block"><sup>&#8225;</sup>Equal Advising </span> -->
+                            <span class="is-size-6 author-block"><sup>*</sup>Co-Lead</span>
                         </div>
 
                         <div class="column has-text-centered">
                             <div class="publication-links">
-                                <!-- TODO REPLACE ALL LINKS -->
-                                <!-- <span class="link-block">
-                                    <a target="_blank" href=""
-                                        class="external-link button is-normal is-rounded is-dark">
-                                        <span class="icon">
-                                            <i class="ai ai-arxiv"></i>
-                                        </span>
-                                        <span>arXiv</span>
-                                    </a>
-                                </span> -->
 
                                 <span class="link-block">
                                     <a target="_blank" href="paper.pdf"
@@ -229,13 +67,6 @@
                                         </span>
                                         <span><b>PDF</b></span>
                                     </a>
-                                    <!-- <a target="_blank" href=""
-                                        class="external-link button is-normal is-rounded is-dark">
-                                        <span class="icon">
-                                            <i class="fab fa-github"></i>
-                                        </span>
-                                        <span>Code</span>
-                                    </a> -->
                                     <a target="_blank" href="visualizer"
                                         class="external-link button is-normal is-rounded is-dark">
                                         <span class="icon">
@@ -284,11 +115,6 @@
 
     <section class="section" style="padding: 0">
         <div class="container is-max-desktop">
-            <!-- Abstract. -->
-            <!-- <div class="columns is-centered has-text-centered">
-                <img src="figures/droid_teaser.png" class="interpolation-image" alt=""
-                style="display: block; width: 100%; margin-left: auto; margin-right: auto" />
-            </div> -->
             <div>
                 <video poster="" id="" autoplay controls muted loop width="100%" playbackRate=2.0 style="border-radius: 5px;">
                     <source src="videos/droid_teaser_animated.m4v" type="video/mp4">
@@ -348,124 +174,6 @@ for episode in ds.take(5):
             </div>
         </div>
     </section>
-    
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script>
-        // Function to update and display the image count
-        function updateImageCount() {
-            var count = $(".image-grid .filter:visible").length;
-            $("#imageCount").text(count);
-        }
-
-        // Function to filter images based on selected filters
-        function filterImages() {
-            var selectedSceneFilters = $(".scene-filter:checked").map(function() {
-                return $(this).data("filter");
-            }).get();
-
-            var selectedObjectFilters = $(".object-filter:checked").map(function() {
-                return $(this).data("filter");
-            }).get();
-
-            // Show all images initially
-            $(".image-grid .filter").show();
-
-            // Hide images that don't match the selected filters
-            if (selectedSceneFilters.length > 0) {
-                $(".image-grid .filter").not("." + selectedSceneFilters.join(", .")).hide();
-            }
-
-            if (selectedObjectFilters.length > 0) {
-                $(".image-grid .filter").not("." + selectedObjectFilters.join(", .")).hide();
-            }
-
-            // Update the image count
-            updateImageCount();
-        }
-
-        // Function to update scene checkboxes based on the "All" checkbox
-        function updateSceneCheckboxes() {
-            var allScenesCheckbox = $("#allScenes");
-            var sceneCheckboxes = $(".scene-filter");
-            
-            if (allScenesCheckbox.prop("checked")) {
-                sceneCheckboxes.prop("checked", false);
-            }
-        }
-
-        // Function to update object checkboxes based on the "All" checkbox
-        function updateObjectCheckboxes() {
-            var allObjectsCheckbox = $("#allObjects");
-            var objectCheckboxes = $(".object-filter");
-            
-            if (allObjectsCheckbox.prop("checked")) {
-                objectCheckboxes.prop("checked", false);
-            }
-        }
-
-        // Event listener for the "All" checkbox within the scene group
-        $("#allScenes").change(function() {
-            // Check if none of the other scene options are selected
-            var noneSelected = $(".scene-filter:checked").length === 0;
-
-            // Update the "All" checkbox accordingly
-            if (noneSelected) {
-                $(this).prop("checked", true);
-            }
-
-            // Update scene checkboxes based on the "All" checkbox
-            updateSceneCheckboxes();
-
-            // Filter the images
-            filterImages();
-        });
-
-        // Event listener for the "All" checkbox within the object group
-        $("#allObjects").change(function() {
-            // Check if none of the other object options are selected
-            var noneSelected = $(".object-filter:checked").length === 0;
-
-            // Update the "All" checkbox accordingly
-            if (noneSelected) {
-                $(this).prop("checked", true);
-            }
-
-            // Update object checkboxes based on the "All" checkbox
-            updateObjectCheckboxes();
-
-            // Filter the images
-            filterImages();
-        });
-
-        // Event listener for the scene options
-        $(".scene-filter").change(function() {
-            // Check if any of the scene options are selected
-            var anySceneSelected = $(".scene-filter:checked").length > 0;
-
-            // Update the "All" checkbox accordingly
-            $("#allScenes").prop("checked", !anySceneSelected);
-
-            // Filter the images
-            filterImages();
-        });
-
-        // Event listener for the object filters
-        $(".object-filter").change(function() {
-            // Check if any of the object options are selected
-            var anyObjectSelected = $(".object-filter:checked").length > 0;
-
-            // Update the "All" checkbox accordingly
-            $("#allObjects").prop("checked", !anyObjectSelected);
-
-            // Filter the images
-            filterImages();
-        });
-
-        updateImageCount(); // Initial call to updateImageCount
-        filterImages(); // Initial call to filterImages
-    </script>
 
     <section class="section">
         <div class="container is-max-widescreen">
